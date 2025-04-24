@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "autoname": "format:{project_name}-{payment_date}-{##}",
+ "creation": "2025-04-12 23:07:59.397369",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_wde0",
+  "amended_from",
+  "project",
+  "project_name",
+  "column_break_anqc",
+  "bank",
+  "payment_date",
+  "section_break_mthr",
+  "payment_details",
+  "section_break_qyxz",
+  "column_break_ratd",
+  "column_break_zzkn",
+  "total_amount",
+  "notes_section",
+  "comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_wde0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "LGED Payment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "LGED Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Bank",
+   "options": "Bank Account",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_mthr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_details",
+   "fieldtype": "Table",
+   "label": "Payment Details",
+   "options": "LGED Site Payment Items",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_qyxz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Amount",
+   "non_negative": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zzkn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "hide_border": 1,
+   "label": "Notes (If any)",
+   "print_hide": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "comment",
+   "fieldtype": "Text Editor",
+   "label": "Comment",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "column_break_anqc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ratd",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-04-14 17:11:08.631900",
+ "modified_by": "Administrator",
+ "module": "LGED",
+ "name": "LGED Payment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "project_name",
+ "track_changes": 1
+}
