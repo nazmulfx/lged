@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "autoname": "field:project_name",
+ "creation": "2025-04-12 19:33:46.431337",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_lryg",
+  "project_name",
+  "project_location",
+  "project_started_date",
+  "project_end_date",
+  "amended_from",
+  "column_break_morv",
+  "active",
+  "project_budget",
+  "bill_received_amount",
+  "total_cost",
+  "project_status",
+  "bill_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_lryg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "LGED Project",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "project_location",
+   "fieldtype": "Data",
+   "label": "Project Location"
+  },
+  {
+   "default": "Today",
+   "fieldname": "project_started_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Project Started Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_morv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "project_budget",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Project Budget",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_end_date",
+   "fieldtype": "Date",
+   "label": "Project End Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Working",
+   "fieldname": "project_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Project Status",
+   "options": "\nWorking\nHold\nComplete"
+  },
+  {
+   "default": "Bill Due",
+   "fieldname": "bill_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Bill Status",
+   "options": "\nBill Due\nBill Received\nOver Budget"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "bill_received_amount",
+   "fieldtype": "Currency",
+   "label": "Bill Received Amount",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-04-13 02:01:26.972770",
+ "modified_by": "Administrator",
+ "module": "LGED",
+ "name": "LGED Project",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "project_name",
+ "track_changes": 1
+}
