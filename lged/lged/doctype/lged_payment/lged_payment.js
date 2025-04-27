@@ -6,13 +6,16 @@ frappe.ui.form.on("LGED Payment", {
         // enter your code here
 	},
 	bank(frm) {
-		frm.events.set_row_value(frm);
+		// frm.events.set_row_value(frm);
+		frm.trigger("set_row_value");
 	},
 	project(frm) {
-		frm.events.set_row_value(frm);
+		// frm.events.set_row_value(frm);
+		frm.trigger("set_row_value");
 	},
 	payment_date(frm) {
-		frm.events.set_row_value(frm);
+		// frm.events.set_row_value(frm);
+		frm.trigger("set_row_value");
 	},
 
     // set child row values when parent row values change
@@ -29,6 +32,7 @@ frappe.ui.form.on("LGED Payment", {
 frappe.ui.form.on('LGED Site Payment Items', {
 	payment_details_add: function(frm, cdt, cdn) {
 		calculate_total(frm);
+		frm.trigger("set_row_value");
 	},
 	amount: function(frm, cdt, cdn) {
 		calculate_total(frm);
