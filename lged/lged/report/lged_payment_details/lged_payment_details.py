@@ -28,7 +28,7 @@ def get_data(filters):
         condition["project"] = filters.get("project")
     if filters.get("bank_account"):
         condition["bank"] = filters.get("bank_account")
-    print("Condition:", condition)
+    # print("Condition:", condition)
         
         
     
