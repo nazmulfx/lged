@@ -30,15 +30,15 @@ def get_data(filters):
         condition["bank"] = filters.get("bank_account")
     # print("Condition:", condition)
         
-        
+    
     
     data = []
     
     payment_entries = frappe.get_list("LGED Payment", filters=condition, fields=["name"])
-    print(payment_entries)
+    # print(payment_entries)
     
     for payment_entry in payment_entries:
-        print("Payment Entry:", payment_entry)
+        # print("Payment Entry:", payment_entry)
         Payemnt_doc = frappe.get_doc("LGED Payment", payment_entry.name)
         for item in Payemnt_doc.payment_details:
             item_data = {
